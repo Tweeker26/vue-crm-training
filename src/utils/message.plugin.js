@@ -1,5 +1,5 @@
 export default {
-  install(Vue, options) {
+  install(Vue) {
     // eslint-disable-next-line
     Vue.prototype.$message = function (html) {
       window.M.toast({ html });
@@ -9,7 +9,5 @@ export default {
     Vue.prototype.$error = function (html) {
       window.M.toast({ html: `[Ошибка]: ${html}` });
     };
-
-    console.log(options);
   },
 };
